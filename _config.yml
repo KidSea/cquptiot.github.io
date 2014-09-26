@@ -13,7 +13,8 @@ permalink: /:year/:month/:day/:title
 # Setup
 title: CQUPTIOT
 tagline: 'Hello everything'
-description: '<a href="https://twitter.com/ztpala" target="_blank">@ztpala</a>，关注<a href="/tag/#iOS">iOS</a>，<a href="/category/#空手道">空手道</a>，<a href="/category/#自行车">自行车</a>以及足球。'
+#description: '<a href="https://twitter.com/ztpala" target="_blank">@ztpala</a>，关注<a href="/tag/#iOS">iOS</a>，<a href="/category/#空手道">空手道</a>，<a href="/category/#自行车">自行车</a>以及足球。'
+description:
 url: http://cquptiot.com
 domain: cquptiot.com
 twitterID: ztpala
