@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Mac下用「命令行＋系统通知」定时 &middot; Tao Zhang
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p><a href="https://twitter.com/ztpala" target="_blank">@ztpala</a>，关注<a href="/tag/#iOS">iOS</a>，<a href="/category/#空手道">空手道</a>，<a href="/category/#自行车">自行车</a>以及足球。</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/apps/">Apps</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/archive/">Archives</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/category/">Categories</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tag/">Tags</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <span class="sidebar-nav-item">Version: 26 Sep 2014</span>
+    <span class="sidebar-nav-item">Powered by: <a href="//jekyllrb.com">Jekyll</a>, <a href="//getpoole.com">Poole</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Tao Zhang</a>
+            <small>iOS, 空手道, 自行车，足球</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Mac下用「命令行＋系统通知」定时</h1>
+  <span class="post-date">25 Mar 2014</span>
+  <blockquote>
+  <p>为革命，保护视力</p>
+</blockquote>
+
+<p>今天戴隐形眼镜一直不舒服，然后去Quora上看看有什么好的眼药水推荐，结果看到一个眼科医生推荐的<a href="http://qr.ae/n63zB">20-20-20法则</a>，即</p>
+
+<p><strong>每20分钟，远望至少20ft（约6米）的距离，20秒以上。</strong></p>
+
+<p>然后用iPhone自带的Timer定时，发现这货到了时间就响铃，哪怕你改了震动。接着想既然iTerm开机就运行，能不能在命令行实现一个简单易用的计时工具，搜索了一下果然找到一个好的<a href="http://apple.stackexchange.com/a/115373/51944">解决方法</a>：</p>
+
+<p>首先，我想在命令行能引发一个系统通知，方法如下：</p>
+
+<pre><code class="language-sh">osascript -e 'display notification "Lorem ipsum dolor sit amet" with title "Title"'
+</code></pre>
+<p>后半部分其实是 <code>AppleScript</code> ，<code>osascript</code>则用于在命令行运行 <code>AppleScript</code>。</p>
+
+<p>接着用 <code>sleep</code> 命令设置多久后运行，所以最终的命令如下：</p>
+
+<pre><code class="language-sh">sleep 1200; osascript -e 'display notification "赶快走开" with title "休息时间" sound name "Sosumi"'
+</code></pre>
+<p>1200的单位是秒，即20分钟。</p>
+
+<p><img src="/images/timeline-timer.png" width="350" /></p>
+
+<p>接下来可以把这个命令写入<a href="https://github.com/pala/dotfiles/blob/master/bin/zz">dotfiles</a>，方便的定制时间，显示文字以及声音。</p>
+
+<h3 id="section">通知的显示</h3>
+
+<p>和其他程序的通知一样，你也可以在系统设置里调整此通知的显示方式：</p>
+
+<p>System Preferences - Notifications - AppleScript Editor</p>
+
+<p>比如选择通知方式为<strong>Alerts</strong>，这样上面的通知框不会自动消失。</p>
+
+<h2 id="section-1">其他方式</h2>
+
+<p>如果你不想用系统通知的方式，则可以用一个简单的 <code>say</code> 命令让电脑念一段文字：</p>
+
+<pre><code class="language-sh">sleep 1200; say "nnnnnnnnnnn  nnnnnnnnnn  mmmmmmm m. gan, g ba, fa dong bu chi lai"
+</code></pre>
+
+<p>只不过冷不丁的听到机器人似的声音挺吓人的。</p>
+
+<h2 id="google">Google</h2>
+
+<p>如果你Google一下 set timer for x minutes，它會自動為你在網頁上設置一個timer。</p>
+
+<h2 id="flux">f.lux</h2>
+
+<p>底下有朋友留言提到了<a href="http://justgetflux.com">f.lux</a>，它的作用是根据你的作息，在临睡前几小时会慢慢将你电脑屏幕中的蓝光去掉变为暖色，有助入睡。</p>
+
+<p>刚开始用flux时可能对这种暖色屏幕不太适应，但稍微使用后再将屏幕调回正常模式感觉非常刺眼，有兴趣的可以<a href="http://justgetflux.com">下载</a>试用一下。支持Mac Windows Linux iOS（需破解）。免费<img class="emoji" title=":punch:" alt=":punch:" src="https://assets.github.com/images/icons/emoji/unicode/1f44a.png" height="20" width="20" align="absmiddle" /></p>
+
+<h2 id="ios">iOS的睡眠模式</h2>
+
+<p>上面说到Timer到时总会响铃，想只要震动的话一个解决方法就是自己做一个没声音的铃声<img class="emoji" title=":trollface:" alt=":trollface:" src="https://assets.github.com/images/icons/emoji/trollface.png" height="20" width="20" align="absmiddle" /></p>
+
+<p>另外后知后觉发现iOS内置了一个睡眠模式，在Timer计时结束后停止播放音乐视频等，只要在选择铃声时选择 <strong>Stop Playing</strong> 即可：</p>
+
+<p><img src="/images/iOSStopPlaying.png" width="320" /></p>
+
+  <div class="tags">
+    <a href="https://github.com/pala/pala.github.com/edit/master/_posts/2014-03-25-mac-os-x-command-line-timer-notification.md" class="pull-right">Edit</a> <a href="/tag/#Mac">#Mac</a> <a href="/tag/#iOS">#iOS</a> <a href="/tag/#Tips">#Tips</a> 
+  </div>
+</div>
+
+<div class="pagination">
+  
+  <a class="pagination-item older" href="/2014/03/14/library">图书馆</a>
+  
+  
+  <a class="pagination-item newer" href="/2014/04/09/the-ultimate-guide-to-solving-ios-battery-drain">iOS省電終極大法</a>
+  
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ztpala'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"><img class="emoji" title=":punch:" alt=":punch:" src="https://assets.github.com/images/icons/emoji/beer.png" height="20" width="20" align="absmiddle"></label>
+
+  </body>
+</html>

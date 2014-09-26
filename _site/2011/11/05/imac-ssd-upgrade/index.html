@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      给iMac(late 2009)升级SSD &middot; Tao Zhang
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p><a href="https://twitter.com/ztpala" target="_blank">@ztpala</a>，关注<a href="/tag/#iOS">iOS</a>，<a href="/category/#空手道">空手道</a>，<a href="/category/#自行车">自行车</a>以及足球。</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/apps/">Apps</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/archive/">Archives</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/category/">Categories</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tag/">Tags</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <span class="sidebar-nav-item">Version: 26 Sep 2014</span>
+    <span class="sidebar-nav-item">Powered by: <a href="//jekyllrb.com">Jekyll</a>, <a href="//getpoole.com">Poole</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Tao Zhang</a>
+            <small>iOS, 空手道, 自行车，足球</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">给iMac(late 2009)升级SSD</h1>
+  <span class="post-date">05 Nov 2011</span>
+  <p>前几天在twitter上<a href="https://twitter.com/#!/ztpala/status/130083508831002624">抱怨</a>了一下iMac的硬盘开始一直「吱吱响个不停，卡的让人抓狂。动不动就假死」。前天终于提醒SMART Status: failing。似乎是好多坏扇区。不过查到很多人是升级到Lion以后才提醒这个错误的。有人给出建议是重新彻底装一下雪豹，如果没有错误则是Lion的误报。重装后发现错误依旧，并且无法再重装回Lion，因为它会先检测SMART Status，如果状态是failing则强迫你换硬盘再升级。无奈只好准备给iMac换硬盘。</p>
+
+<blockquote>
+  <p>注：经查此硬盘已经工作了7482个小时，也算倒在工作岗位上了。</p>
+</blockquote>
+
+<p>首选当然SSD。不过对于没有预留相关接口的09年版iMac来说，升级SSD有些麻烦，更不用提它还是个没有机箱概念的一体机。</p>
+
+<p>最后在网上查了一下相关过程，参考了<a href="http://www.ifixit.com/Guide/iMac-Intel-27-Inch-Hard-Drive-Replacement/1634/1">ifixit</a>的升级报告，开始动手。</p>
+
+<p>具体过程可以参考上面图文并茂的攻略，这里只列一下准备工具：</p>
+
+<p><img src="https://lh3.googleusercontent.com/-CpauMmuF09Y/TrTuEOOKmYI/AAAAAAABh4E/Ow0gdHMOzNY/s640/IMG_3314.jpg" alt="" /></p>
+
+<p>1.2.5英寸<a href="http://www.amazon.com/gp/product/B004W2JL2A/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B004W2JL2A&amp;linkCode=as2&amp;tag=palaapp-20">SSD一块</a></p>
+
+<p>2.5转3.5<a href="http://www.amazon.com/gp/product/B002Z2QDNE/ref=as_li_tf_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B002Z2QDNE&amp;linkCode=as2&amp;tag=palaapp-20">硬盘盒一个</a> 可选，你可以用超强的胶布把这个硬盘粘在上面。</p>
+
+<p>3.<a href="http://www.walmart.com/ip/Bondo-Double-Handle-Locking-Suction-Cup-Dent-Puller/17130354">吸盘一个</a> 因为iMac没有所谓的可拆机箱，要换硬盘，只能先把屏幕拿掉，这个吸盘这是用来拿掉最上面的玻璃面板。本来最担心这一步，怕一不小心用力过度把那么大一块玻璃弄碎了，谁知拿下时非常容易，玻璃后面四周有一圈金属圈，用来吸附到iMac里的磁铁上。这个吸盘貌似还可以吸汽车撞痕。</p>
+
+<p><img src="https://lh4.googleusercontent.com/-yropBLTEBaM/TrTuEAoXSwI/AAAAAAABh4U/-d5H0UYH6fY/s640/IMG_3316.jpg" alt="" /></p>
+
+<p>拿掉玻璃面板之后：</p>
+
+<p><img src="https://lh4.googleusercontent.com/-yw6eYJ6rLfQ/TrTuEBTrfWI/AAAAAAABh4I/Rx9m2_W0wyo/s640/IMG_3318.jpg" alt="" /></p>
+
+<p>4.螺丝刀，需要T8和T10两种。恰好上次用0.99刀收过一副小螺丝刀，刚好能用上。</p>
+
+<p>5.曲别针一个，用来拿掉玻璃面板后把液晶屏勾出来。</p>
+
+<p>6.一小段导线。</p>
+
+<p>因为原来的HDD会连着一段风扇用的导线，不过SSD没有发热问题所以不需要风扇，也就没有这段导线的接口，但如果这段导线放那什么都不连的话则会导致风扇狂转（不知道它是不是以为硬盘温度高的读不出来）。<a href="http://forums.macrumors.com/showthread.php?t=808178">MacRumors</a>上面有人发现只要用一小段导线把它绝缘便可以解决这个问题。我用了一段订书钉，最后发现无效，不知道是不是不导电，最后还是得用软件解决。有人推荐用<a href="http://www.hddfancontrol.com/">HDD Fan Control</a>，试用了一下果然效果很好，马上转速由5000多恢复正常，不过这个小软件售价29.95刀。还有人推荐smcFanControl，<del>我这里根本不工作</del>，安装后用Automator将以下命令生成一个小app，然后设置成开机运行：</p>
+
+<p><code>/Applications/smcFanControl.app/Contents/Resources/smc -k F1Mx -w 0000</code></p>
+
+<p>最后在上面那个MacRumors的主题下有人分享了自己写的一个免费小程序，叫<a href="http://exirion.net/ssdfanctrl/Site/SSD_Fan_Control.html">SSD Fan Control</a>，果然很好用，超级感激那位网友。</p>
+
+<p>现在电脑一切工作正常，附一下SSD读写速度测试：</p>
+
+<p><img src="https://lh5.googleusercontent.com/-G975EFVO5Hs/Tw0w0740MBI/AAAAAAABivA/oQUXrYi14wQ/s640/Screen%252520Shot%2525202011-11-04%252520at%2525208.45.35%252520PM.png" alt="" /></p>
+
+  <div class="tags">
+    <a href="https://github.com/pala/pala.github.com/edit/master/_posts/2011-11-05-imac-ssd-upgrade.md" class="pull-right">Edit</a> <a href="/tag/#Mac">#Mac</a> 
+  </div>
+</div>
+
+<div class="pagination">
+  
+  <a class="pagination-item older" href="/2011/10/27/code-highlighting-jekyll">Jekyll的代码高亮</a>
+  
+  
+  <a class="pagination-item newer" href="/2011/11/06/rothrock-biking">Rothrock骑行</a>
+  
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ztpala'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"><img class="emoji" title=":punch:" alt=":punch:" src="https://assets.github.com/images/icons/emoji/beer.png" height="20" width="20" align="absmiddle"></label>
+
+  </body>
+</html>

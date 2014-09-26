@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      用Dropbox选择性同步Jekyll &middot; Tao Zhang
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p><a href="https://twitter.com/ztpala" target="_blank">@ztpala</a>，关注<a href="/tag/#iOS">iOS</a>，<a href="/category/#空手道">空手道</a>，<a href="/category/#自行车">自行车</a>以及足球。</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/apps/">Apps</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/archive/">Archives</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/category/">Categories</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tag/">Tags</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+    <span class="sidebar-nav-item">Version: 26 Sep 2014</span>
+    <span class="sidebar-nav-item">Powered by: <a href="//jekyllrb.com">Jekyll</a>, <a href="//getpoole.com">Poole</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Tao Zhang</a>
+            <small>iOS, 空手道, 自行车，足球</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">用Dropbox选择性同步Jekyll</h1>
+  <span class="post-date">17 Jul 2013</span>
+  <p>如果你用<a href="http://db.tt/H7ei7k2">Dropbox</a>存放和同步<a href="/2011/09/12/jekyll-and-github-pages">Jekyll</a>的代码和文章，那么最好进行一些设置防止运行Jekyll时Dropbox大量更新而~~烧毁~~烧热你的电脑。</p>
+
+<p>Dropbox的 <strong>Selective Sync</strong> 可以让你选择性的同步某些文件夹：</p>
+
+<p><code>Preferences</code> - <code>Advanced</code> - <code>Selective Sync</code> - <code>Change Settings</code></p>
+
+<p>Jekyll用 <code>_site</code> 这个文件夹来存放生成好的静态文件，这也是为什么 <code>.gitignore</code> 里会默认加入它。</p>
+
+<p>所以最好也在上述的Dropbox选择性同步里将这个文件夹排除，以防止每次build网站时都同步大量的新文件，这天已经够热的了:</p>
+
+<blockquote>
+  <p>RealFeel 40°，我去 <a href="https://twitter.com/search?q=%23%E5%A4%A9%E6%B0%94&amp;src=hash">#天气</a> <small><a href="https://twitter.com/ztpala/statuses/357578857265643520">@ztpala</a> 3:13 PM - 17 Jul 2013</small></p>
+</blockquote>
+
+<p><a href="https://forums.dropbox.com/?tag=beta">Dropbox Beta版下载</a></p>
+
+  <div class="tags">
+    <a href="https://github.com/pala/pala.github.com/edit/master/_posts/2013-07-17-dropbox-selective-sync-jekyll.md" class="pull-right">Edit</a> <a href="/tag/#Jekyll">#Jekyll</a> <a href="/tag/#Dropbox">#Dropbox</a> <a href="/tag/#Tips">#Tips</a> 
+  </div>
+</div>
+
+<div class="pagination">
+  
+  <a class="pagination-item older" href="/2013/07/13/biking-550">550绕圈</a>
+  
+  
+  <a class="pagination-item newer" href="/2013/07/18/firefly">萤火虫</a>
+  
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ztpala'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"><img class="emoji" title=":punch:" alt=":punch:" src="https://assets.github.com/images/icons/emoji/beer.png" height="20" width="20" align="absmiddle"></label>
+
+  </body>
+</html>
