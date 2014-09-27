@@ -9,7 +9,7 @@ auto: true
 # presonal config
 title: CQUPTIOT
 #feed: http://feed.ixxoo.me
-comments: disqus
+comments: duosuo
 
 author:
   name: KaleoCheng
