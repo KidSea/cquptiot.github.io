@@ -1,0 +1,29 @@
+markdown: redcarpet
+permalink: /:title.html
+url: http://www.cquptiot.com
+lsi: true
+pygments: true
+safe: true
+auto: true
+
+# presonal config
+title: CQUPTIOT
+#feed: http://feed.ixxoo.me
+comments: disqus
+
+author:
+  name: KaleoCheng
+  nickname: kaleo
+  email: cquptiot@gmail.com
+  gmail: cquptiot@gmail.com
+  #qqmail: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=GnZzcX94f257WmtrNHl1dw
+  #qqlist: http://list.qq.com/cgi-bin/qf_invite?id=eff06957927177ae5d491bb3c18e4a3c5fc328c95b6ae04f
+  site: http://www.cquptiot.com
+
+seo: 
+  keyword: 
+  description: 
+config:
+  js_dir:
+  img_dir:
+  css_dir:
